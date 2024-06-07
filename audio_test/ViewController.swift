@@ -73,19 +73,20 @@ class ViewController: UIViewController, ChartViewDelegate {
             audioRecorder.record()
             
             // read audio file to be played
-            guard let chirpurl = Bundle.main.url(forResource: "tone_1000", withExtension: "wav") else { return }
+            guard let chirpurl = Bundle.main.url(forResource: "tone_18000", withExtension: "wav") else { return }
             
             player = try AVAudioPlayer(contentsOf: chirpurl, fileTypeHint: AVFileType.mp3.rawValue)
+            player?.numberOfLoops = -1
             
             // sets the volume, make sure phone is not on silent mode and external volume switch has volume up
             guard let player = player else { return }
-            player.volume=0.01
+            player.volume=1
             
             player.play()
             
             // important, need to sleep main thread while speaker is playing, otherwise
             // it will directly execute the next step without waiting for file to finish playing
-            sleep(1)
+            sleep(5)
             
             audioRecorder.stop()
             player.stop()
@@ -177,7 +178,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         
         counter=0
         for val in fftMagnitudes {
-            self.lineChart.data?.append(ChartDataEntry(x: Double(counter), y: 10*log10(val)) as! ChartDataSetProtocol)
+            self.lineChart.data?.appendEntry(ChartDataEntry(x: Double(counter), y: 10*log10(val)), toDataSet: ChartData.Index(0))
             counter+=1
         }
         
