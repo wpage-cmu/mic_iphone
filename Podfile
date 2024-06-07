@@ -6,7 +6,7 @@ target 'audio_test' do
   use_frameworks!
 
   # Pods for imu_test
-  pod 'Charts'
+  pod 'DGCharts'
   
   target 'audio_testTests' do
     inherit! :search_paths
