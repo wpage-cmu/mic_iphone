@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		89584D4927F47648008DE7CC /* tone_200.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89584D4727F47647008DE7CC /* tone_200.wav */; };
 		89584D4A27F47648008DE7CC /* tone_1000.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89584D4827F47647008DE7CC /* tone_1000.wav */; };
 		89584D4C27F478BE008DE7CC /* tone_5000.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89584D4B27F478BD008DE7CC /* tone_5000.wav */; };
+		8D7446482C13408A006BEBAB /* tone_18000.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D7446472C13408A006BEBAB /* tone_18000.wav */; };
 		F59C9682187F95D55340F60A /* Pods_audio_test_audio_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5401EF268D7C65DF0A5FAD9F /* Pods_audio_test_audio_testUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		89584D4727F47647008DE7CC /* tone_200.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tone_200.wav; sourceTree = "<group>"; };
 		89584D4827F47647008DE7CC /* tone_1000.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tone_1000.wav; sourceTree = "<group>"; };
 		89584D4B27F478BD008DE7CC /* tone_5000.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tone_5000.wav; sourceTree = "<group>"; };
+		8D7446472C13408A006BEBAB /* tone_18000.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tone_18000.wav; sourceTree = "<group>"; };
 		9905481A377AE9D227BACB13 /* Pods-audio_testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio_testTests.release.xcconfig"; path = "Target Support Files/Pods-audio_testTests/Pods-audio_testTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8AF7FAFD7C1A03FA96B135E /* Pods-audio_test-audio_testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio_test-audio_testUITests.debug.xcconfig"; path = "Target Support Files/Pods-audio_test-audio_testUITests/Pods-audio_test-audio_testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE31626D03C2AC3B89318698 /* Pods-audio_testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-audio_testTests.debug.xcconfig"; path = "Target Support Files/Pods-audio_testTests/Pods-audio_testTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 				AE31626D03C2AC3B89318698 /* Pods-audio_testTests.debug.xcconfig */,
 				9905481A377AE9D227BACB13 /* Pods-audio_testTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +143,7 @@
 				89584D4727F47647008DE7CC /* tone_200.wav */,
 				89584D4827F47647008DE7CC /* tone_1000.wav */,
 				89584D4B27F478BD008DE7CC /* tone_5000.wav */,
+				8D7446472C13408A006BEBAB /* tone_18000.wav */,
 				8914409B261A9AFA00AAD706 /* AppDelegate.swift */,
 				8914409D261A9AFA00AAD706 /* SceneDelegate.swift */,
 				8914409F261A9AFA00AAD706 /* ViewController.swift */,
@@ -289,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7446482C13408A006BEBAB /* tone_18000.wav in Resources */,
 				891440CF261A9B9A00AAD706 /* shortchirp.wav in Resources */,
 				89584D4927F47648008DE7CC /* tone_200.wav in Resources */,
 				891440A8261A9AFD00AAD706 /* LaunchScreen.storyboard in Resources */,
