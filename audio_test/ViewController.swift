@@ -13,6 +13,8 @@ import Accelerate
 class ViewController: UIViewController, ChartViewDelegate {
 
     
+    @IBOutlet weak var lengthField: UITextField!
+    @IBOutlet weak var volField: UITextField!
     @IBOutlet weak var lineChart: LineChartView!
     var audioSession:AVAudioSession!
     var audioRecorder:AVAudioRecorder!
@@ -21,11 +23,13 @@ class ViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.volField.keyboardType = UIKeyboardType.decimalPad
+        self.lengthField.keyboardType = .asciiCapableNumberPad
         self.lineChart.delegate = self
     }
     
     @IBAction func startButton(_ sender: Any) {
+        self.view.endEditing(true)
         let timestamp = NSDate().timeIntervalSince1970
         
         let set_a: LineChartDataSet = LineChartDataSet(entries: [ChartDataEntry](), label: "")
@@ -80,13 +84,13 @@ class ViewController: UIViewController, ChartViewDelegate {
             
             // sets the volume, make sure phone is not on silent mode and external volume switch has volume up
             guard let player = player else { return }
-            player.volume=1
+            player.volume=Float(volField.text!)!
             
             player.play()
             
             // important, need to sleep main thread while speaker is playing, otherwise
             // it will directly execute the next step without waiting for file to finish playing
-            sleep(5)
+            sleep(UInt32(lengthField.text!)!)
             
             audioRecorder.stop()
             player.stop()
